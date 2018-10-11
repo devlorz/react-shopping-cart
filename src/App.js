@@ -5,6 +5,7 @@ import './App.css';
 
 import AppBar from './components/AppBar';
 import NavList from './components/NavList';
+import SearchBar from './components/SearchBar';
 
 class App extends Component {
   state = {
@@ -29,6 +30,7 @@ class App extends Component {
             <NavList />
           </div>
         </Drawer>
+        <SearchBar />
       </div>
     );
   }
