@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
-import Icon from '@material-ui/core/Icon';
 
 const styles = theme => ({
   root: {
@@ -21,26 +19,14 @@ function SimpleList(props) {
   return (
     <div className={classes.root}>
       <List component="nav">
-        <ListItem button>
-          <ListItemIcon>
-            <Icon>inbox</Icon>
-          </ListItemIcon>
-          <ListItemText primary="Inbox" />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <Icon>drafts</Icon>
-          </ListItemIcon>
-          <ListItemText primary="Drafts" />
+        <ListItem>
+          <ListItemText primary="Welcome, Guest" />
         </ListItem>
       </List>
       <Divider />
       <List component="nav">
         <ListItem button>
-          <ListItemText primary="Trash" />
-        </ListItem>
-        <ListItem button component="a" href="#simple-list">
-          <ListItemText primary="Spam" />
+          <ListItemText primary="LOGIN" />
         </ListItem>
       </List>
     </div>
