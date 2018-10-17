@@ -1,17 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+import TextField from '@material-ui/core/TextField'
 
 const styles = {
   textField: {
-    width: '60%'
-  }
-};
+    width: '60%',
+  },
+}
 
 class SearchBar extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes } = this.props
     return (
       <TextField
         id="standard-search"
@@ -20,12 +20,12 @@ class SearchBar extends React.Component {
         className={classes.textField}
         margin="normal"
       />
-    );
+    )
   }
 }
 
 SearchBar.propTypes = {
-  classes: PropTypes.object.isRequired
-};
+  classes: PropTypes.object.isRequired,
+}
 
-export default withStyles(styles)(SearchBar);
+export default withStyles(styles)(SearchBar)

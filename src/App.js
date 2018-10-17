@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import Drawer from '@material-ui/core/Drawer';
+import React, { Component } from 'react'
+import Drawer from '@material-ui/core/Drawer'
 
-import './App.css';
+import './App.css'
 
-import AppBar from './components/AppBar';
-import NavList from './components/NavList';
-import SearchBar from './components/SearchBar';
+import AppBar from './components/AppBar'
+import NavList from './components/NavList'
+import SearchBar from './components/SearchBar'
 
 class App extends Component {
   state = {
-    navOpen: false
-  };
+    navOpen: false,
+  }
   toggleDrawer = () => {
     this.setState({
-      navOpen: !this.state.navOpen
-    });
-  };
+      navOpen: !this.state.navOpen,
+    })
+  }
   render() {
     return (
       <div className="App">
@@ -30,10 +30,12 @@ class App extends Component {
             <NavList />
           </div>
         </Drawer>
-        <SearchBar />
+        <div>
+          <SearchBar />
+        </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
