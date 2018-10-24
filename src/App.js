@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component, lazy, Suspense } from 'react'
 import Drawer from '@material-ui/core/Drawer'
 
 import './App.css'
 
 import AppBar from './components/AppBar'
 import NavList from './components/NavList'
-import SearchBar from './components/SearchBar'
+const SearchBar = lazy(() => import('./components/SearchBar'))
 
 class App extends Component {
   state = {
@@ -17,6 +17,11 @@ class App extends Component {
     })
   }
   render() {
+    const searchBar = (
+      <Suspense fallback={<div>Loading...</div>}>
+        <SearchBar />
+      </Suspense>
+    )
     return (
       <div className="App">
         <AppBar onClickMenu={this.toggleDrawer} />
@@ -30,9 +35,7 @@ class App extends Component {
             <NavList />
           </div>
         </Drawer>
-        <div>
-          <SearchBar />
-        </div>
+        <div>{searchBar}</div>
       </div>
     )
   }
